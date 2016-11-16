@@ -16,10 +16,15 @@
 			<input type = "text"  required="" name="idioma" placeholder = "idioma" value "" /> <br/><br/>
 			<input type = "text"  required="" name="id_autor" placeholder = "id_autor" value "" /> <br/><br/>
 			<input type = "text"  required="" name="id_libro" placeholder = "id_libro" value "" /> <br/><br/>
-          
-		
-			
-			
+			idioma: <br>   
+<select multiple name="idioma">    
+<option name="español" value="español">español</option>    
+<option name="ingles" value="ingles">ingles</option>    
+<option name="frances" value="frances">frances</option>    
+<option name="italiano" value="italiano">italiano</option>    
+<option name="hebre0" value="hebreo">hebreo</option>     
+</select>
+<br>
 			<br/>
 			<h1><input type = "submit" value =  "aceptar"/></h1>
 		</form>
