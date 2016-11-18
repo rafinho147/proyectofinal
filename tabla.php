@@ -22,8 +22,6 @@
 					<td> AUTOR</td>
 					<td> CATEGORIA</td>
 					<td> IDIOMA</td>
-					<td> ID_AUTOR</td>
-					<td> ID_LIBRO</td>
 
 					<td colspan="8"> insecion de libro</td>
 				</tr>
@@ -49,8 +47,6 @@ and libro.id_idioma=idioma.id_idioma";
 				<td><?php echo $row['autor']; ?></td>
 				<td><?php echo $row['categoria']; ?></td>
 				<td><?php echo $row['idioma']; ?></td>
-				<td><?php echo $row['id_autor']; ?></td>
-				<td><?php echo $row['id_libro']; ?></td>
 			
                 <td><a href="modificar.php?libro= <?php echo $row['libro']; ?>">Modificar</a></td>
 				<td><a href="encriptacion.html?" >ADMINISTRADOR </a></td>
@@ -67,4 +63,5 @@ and libro.id_idioma=idioma.id_idioma";
 </body>
 </html>
 
+          
           
