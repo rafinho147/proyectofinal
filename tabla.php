@@ -28,7 +28,7 @@
 			<?php
 				include("conexion.php");
 
-				$query="SELECT libro,idioma,categoria,fecha,foto,autor,link,autor.id_autor,libro.id_libro from libro,categoria,idioma,autor_libro,autor
+				$query="SELECT libro,idioma,categoria,fecha,foto,autor,link from libro,categoria,idioma,autor_libro,autor
 WHERE libro.id_libro=autor_libro.id_libro
 and autor_libro.id_autor=autor.id_autor
 and libro.id_categoria=categoria.id_categoria

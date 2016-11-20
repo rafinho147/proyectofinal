@@ -7,16 +7,12 @@
 	<center>
 		<form action="operacion_guardar.php" method="GET">
 			 <br/> <br/> <br/>
-			<input type = "text"  required="" name="libro" placeholder = "libro" value "" /> <br/><br/>
-			<input type = "text"  required="" name="foto" placeholder = "foto" value "" /> <br/><br/>
-			<input type = "text"  required="" name="fecha" placeholder = "fecha" value "" /> <br/><br/>
-			<input type = "text"  required="" name="link" placeholder = "link" value "" /> <br/><br/>
-			<input type = "text"  required="" name="autor" placeholder = "autor" value "" /> <br/><br/>
-			<input type = "text"  required="" name="categoria" placeholder = "categoria" value "" /> <br/><br/>
-			<input type = "text"  required="" name="idioma" placeholder = "idioma" value "" /> <br/><br/>
+		
+			<div> EL MUNDO DE LIBRO DEL LIBRO GRATIS .COM</div>
+		
 			
 <div>seleccione una categoria</div>
-<select name="id_Categoria">
+<select name="id_categoria">
 <?php
 try{
 $conexion = new PDO("mysql:host=localhost;dbname=biblioteca","root","");
@@ -57,51 +53,21 @@ catch(Exception $e)
 ?>
 </select>
 
-<div>seleccione autor relacionado</div>
-<select name="id_autor">
-<?php
-try{
-$conexion = new PDO("mysql:host=localhost;dbname=biblioteca","root","");
-$resultados = $conexion->query("select * from autor");
-foreach ($resultados as $fila)
-{
-    echo "<option value='$fila[id_autor]'>$fila[autor]</option>";
-}    
 
+<br/>
+<div> EN DADO CASO DE QUE NO ENCUENTRE EL AUTOR NI EL LIBRO EN LA LISTA DESPEGABLE</div>
+<br/>
+<br/>
 
-}
-catch(Exception $e)
-{
-    echo $e->getMessage();
-}
+	<a href="usuario_autor.php?">INSERTE AUTOR Y LIBRO</a>
+	<br/>
+<br/>
 
-?>
-</select>
-
-<div>seleccione libro relacionado </div>
-<select name="id_libro">
-<?php
-try{
-$conexion = new PDO("mysql:host=localhost;dbname=biblioteca","root","");
-$resultados = $conexion->query("select * from libro");
-foreach ($resultados as $fila)
-{
-    echo "<option value='$fila[id_libro]'>$fila[libro]</option>";
-}    
-
-
-}
-catch(Exception $e)
-{
-    echo $e->getMessage();
-}
-
-?>
-</select>
-
-
-
-
+            <input type = "text"  required="" name="libro" placeholder = "libro" value "" /> <br/><br/>
+            <input type = "text"  required="" name="autor" placeholder = "autor" value "" /> <br/><br/>
+	        <input type = "text"  required="" name="foto" placeholder = "foto" value "" /> <br/><br/>
+			<input type = "text"  required="" name="fecha" placeholder = "fecha" value "" /> <br/><br/>
+			<input type = "text"  required="" name="link" placeholder = "link" value "" /> <br/><br/>
 			<br/>
 			<h1><input type = "submit" value =  "aceptar"/></h1>
 		</form>
