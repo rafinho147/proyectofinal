@@ -18,7 +18,6 @@ foreach ($resultados as $fila)
     echo "<option value='$fila[id_autor]'>$fila[autor]</option>";
 }    
 
-
 }
 catch(Exception $e)
 {
@@ -38,7 +37,6 @@ foreach ($resultados as $fila)
 {
     echo "<option value='$fila[id_libro]'>$fila[libro]</option>";
 }    
-
 
 }
 catch(Exception $e)

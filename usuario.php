@@ -62,7 +62,6 @@ catch(Exception $e)
 	<a href="usuario_autor.php?">INSERTE AUTOR Y LIBRO</a>
 	<br/>
 <br/>
-
             <input type = "text"  required="" name="libro" placeholder = "libro" value "" /> <br/><br/>
             <input type = "text"  required="" name="autor" placeholder = "autor" value "" /> <br/><br/>
 	        <input type = "text"  required="" name="foto" placeholder = "foto" value "" /> <br/><br/>

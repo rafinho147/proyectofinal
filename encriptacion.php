@@ -9,7 +9,6 @@ $resultados = $conexion->query("SELECT usuario, clave FROM usuario where usuario
 foreach ($resultados as $fila )    
 {
 
-
 $_SESSION["autenticado"]="SI";
 	header("Location: tabla1.php");
 }
