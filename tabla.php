@@ -50,7 +50,7 @@ and libro.id_idioma=idioma.id_idioma";
 				<td><?php echo $row['categoria']; ?></td>
 				<td><?php echo $row['idioma']; ?></td>
 			
-                <td><a href="modificar.php?id_libro= <?php echo $row['id_libro']; ?>">Modificar</a></td>
+                <td><a href="modificar.php?id_libro=<?php echo $row['id_libro']; ?>">Modificar</a></td>
 				<td><a href="encriptacion.html?" >ADMINISTRADOR </a></td>
 			</tr>
 			<?php

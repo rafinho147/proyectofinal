@@ -2,21 +2,29 @@
 
 include ("conexion.php");
 
-$libro= $_GET["libro"];
-$foto= $_GET["foto"];
-$fecha= $_GET["fecha"];
-$link= $_GET["link"];
-$autor= $_GET["autor"];
-$id_autor= $_GET["id_autor"];
-$id_libro= $_GET["id_libro"];
-$id_idioma= $_GET["id_idioma"];
-$id_categoria= $_GET["id_categoria"];
+$id_libro=$_REQUEST['id_libro'];
+/*$id_libro=$_POST['id_libro'];*/
+$libro= $_POST["libro"];
+$foto= $_POST["foto"];
+$fecha= $_POST["fecha"];
+$link= $_POST["link"];
+$autor= $_POST["autor"];
+$id_autor= $_POST["id_autor"];
+$id_libro= $_POST["id_libro"];
+$id_idioma= $_POST["id_idioma"];
+$id_categoria= $_POST["id_categoria"];
+
+
+
  
 $query="UPDATE autor SET  autor='$autor' WHERE id_autor='$id_autor'";
 $resultado= $conexion->query($query);
 
 $query="UPDATE libro SET  libro='$libro', foto='$foto', fecha='$fecha', link='$link', id_idioma='$id_idioma', id_categoria='$id_categoria' WHERE id_libro='$id_libro' ";
 $resultado= $conexion->query($query);
+
+
+
 
 
 if($resultado){
@@ -28,3 +36,5 @@ else{
 
 
 ?>
+
+

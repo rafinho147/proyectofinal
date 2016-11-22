@@ -5,7 +5,7 @@
 	 </head>
 <body>
 	<center>
-		<form action="operacion_guardar.php" method="GET">
+		<form action="operacion_guardar.php" method="POST">
 			 <br/> <br/> <br/>
 		
 			<div> EL MUNDO DE LIBRO DEL LIBRO GRATIS .COM</div>

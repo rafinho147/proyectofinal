@@ -2,29 +2,19 @@
 
 include ("conexion.php");
 
-$libro=$_REQUEST['libro'];
- 
-$query=" DELETE FROM libro WHERE libro='$libro' ";
+$id_libro=$_GET["id_libro"];
+
+
+
+$query=" DELETE FROM autor_libro WHERE id_libro=$id_libro ";
+$resultado= $conexion->query($query);
+
+
+$query=" DELETE FROM libro WHERE id_libro=$id_libro ";
 
 $resultado= $conexion->query($query);
 
 
-
-$query=" DELETE FROM autor_libro WHERE id_autor='$id_autor' AND id_libro='id_libro' ";
-
-
-$resultado= $conexion->query($query);
-
-$query="DELETE FROM autor WHERE autor='$autor' ";
-
-
-$resultado= $conexion->query($query);
-$query="DELETE FROM categoria WHERE categoria='$categoria' ";
-$resultado= $conexion->query($query);
-
-$query="DELETE FROM idioma WHERE idioma='$idioma' ";
-
-$resultado= $conexion->query($query);
 
 
 

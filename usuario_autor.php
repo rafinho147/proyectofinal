@@ -4,7 +4,7 @@
 	 </head>
 <body>
 	<center>
-		<form action="guardar_autor.php" method="GET">
+		<form action="guardar_autor.php" method="POST">
 			 <br/> <br/> <br/>
 			<div>seleccione el actor del libro que desea insertar</div>
 			<div>seleccione autor relacionado</div>

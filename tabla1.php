@@ -1,3 +1,5 @@
+<
+				
 <html>
 	 <head> 
 		<title> buscar libro  </title>
@@ -8,7 +10,7 @@
 			<thead>
 			<tr>
 				<th colspan="4"> <a href="usuario.php"> NUEVO LIBRO </a> </th>
-				<th colspan="9"> biblioteca </th>
+				<th colspan="9"> BIBLIOTECA</th>
 			</tr>
 				
 			</thead>
@@ -49,8 +51,8 @@ and libro.id_idioma=idioma.id_idioma";
 				<td><?php echo $row['categoria']; ?></td>
 				<td><?php echo $row['idioma']; ?></td>
 			
-                <td><a href="modificar.php?id_libro= <?php echo $row['id_libro']; ?>">Modificar</a></td>
-				<td><a href="eliminar.php?libro= <?php echo $row['libro']; ?>" >Eliminar </a></td>
+                <td><a href="modificar.php?id_libro=<?php echo $row['id_libro']; ?>">Modificar</a></td>
+				<td><a href="eliminar.php?id_libro=<?php echo $row['id_libro']; ?>">Eliminar </a></td>
 			</tr>
 			<?php
                    }
@@ -64,6 +66,8 @@ and libro.id_idioma=idioma.id_idioma";
 </body>
 </html>
 
+
+			
 
 				
 			

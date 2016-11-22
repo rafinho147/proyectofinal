@@ -2,13 +2,13 @@
 
 INCLUDE ("conexion.PHP");
 
-$libro= $_GET["libro"];
-$autor= $_GET["autor"];
-$foto= $_GET["foto"];
-$fecha= $_GET["fecha"];
-$link= $_GET["link"];
-$id_categoria= $_GET["id_categoria"];
-$id_idioma= $_GET["id_idioma"];
+$libro= $_POST["libro"];
+$autor= $_POST["autor"];
+$foto= $_POST["foto"];
+$fecha= $_POST["fecha"];
+$link= $_POST["link"];
+$id_categoria= $_POST["id_categoria"];
+$id_idioma= $_POST["id_idioma"];
 
 $query="INSERT INTO `autor`( `autor`) VALUES ('$autor')";
 $resultado= $conexion->query($query);

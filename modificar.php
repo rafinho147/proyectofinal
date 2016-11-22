@@ -6,7 +6,7 @@
 <body>
 	<center>
 	< <?php
-		 $id_libro=$_REQUEST['id_libro'];
+		 $id_libro=$_GET['id_libro'];
 				include("conexion.php");
 				
 
@@ -14,17 +14,19 @@
 WHERE libro.id_libro=autor_libro.id_libro
 and autor_libro.id_autor=autor.id_autor
 and libro.id_categoria=categoria.id_categoria
-and libro.id_idioma=idioma.id_idioma";
+and libro.id_idioma=idioma.id_idioma and libro.id_libro = $id_libro";
+
+
 
 				$resultado= $conexion->query($query);
 				$row=$resultado->fetch_assoc();
  	
 			?>
-		<form action="modificar_proceso.php?libro=<?php echo $row['libro']; ?>" method="GET">
+		<form action="modificar_proceso.php?id_libro=<?php echo $row['id_libro']; ?>" method="POST">
 		
 			 <br/> <br/> <br/>
-
-
+			
+            <input type = "text"  required="" name="id_libro" placeholder = "libro" value="<?php echo $row['id_libro']; ?>" /> <br/><br/>
 		    <input type = "text"  required="" name="libro" placeholder = "libro" value="<?php echo $row['libro']; ?>" /> <br/><br/>
 			<input type = "text"  required="" name="foto" placeholder = "foto" value="<?php echo $row['foto']; ?>" /> <br/><br/>
 			<input type = "text"  required="" name="fecha" placeholder = "fecha" value="<?php echo $row['fecha']; ?>" /> <br/><br/>
