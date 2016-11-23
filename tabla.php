@@ -29,11 +29,12 @@
 			<?php
 				include("conexion.php");
 
-				$query="SELECT libro.id_libro,libro,idioma,categoria,fecha,foto,autor,link from libro,categoria,idioma,autor_libro,autor
-WHERE libro.id_libro=autor_libro.id_libro
+				$query="SELECT  libro.id_libro, libro,foto, link, libro.id_categoria, libro.id_idioma, autor.autor, libro.fecha, categoria, idioma from libro, autor_libro, categoria,idioma, autor WHERE
+libro.id_libro=autor_libro.id_libro
 and autor_libro.id_autor=autor.id_autor
-and libro.id_categoria=categoria.id_categoria
-and libro.id_idioma=idioma.id_idioma";
+AND categoria.id_categoria=libro.id_categoria
+and idioma.id_idioma=libro.id_idioma
+GROUP BY libro.id_libro";
 
 				$resultado= $conexion->query($query);
 				while($row=$resultado->fetch_assoc()){
@@ -43,9 +44,9 @@ and libro.id_idioma=idioma.id_idioma";
 			<tr>
 			    <td><?php echo $row['id_libro']; ?></td>
 				<td><?php echo $row['libro']; ?></td>
-				<td><?php echo $row['foto']; ?></td>
+				<td><?php echo "<img src=$row[foto]></img>" ;?></td> 
 				<td><?php echo $row['fecha']; ?></td>
-				<td><?php echo $row['link']; ?></td>
+				<td><?php echo "<a href=index.php?frase=>$row[link]</a>"; ?></td>   
 				<td><?php echo $row['autor']; ?></td>
 				<td><?php echo $row['categoria']; ?></td>
 				<td><?php echo $row['idioma']; ?></td>

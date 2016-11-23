@@ -52,19 +52,11 @@ catch(Exception $e)
 
 ?>
 </select>
-
-
-<br/>
-<div> EN DADO CASO DE QUE NO ENCUENTRE EL AUTOR NI EL LIBRO EN LA LISTA DESPEGABLE</div>
 <br/>
 <br/>
 
-	<a href="usuario_autor.php?">INSERTE AUTOR Y LIBRO</a>
-	<br/>
-<br/>
             <input type = "text"  required="" name="libro" placeholder = "libro" value "" /> <br/><br/>
-            <input type = "text"  required="" name="autor" placeholder = "autor" value "" /> <br/><br/>
-	        <input type = "text"  required="" name="foto" placeholder = "foto" value "" /> <br/><br/>
+            <input type = "text"  required="" name="foto" placeholder = "foto" value "" /> <br/><br/>
 			<input type = "text"  required="" name="fecha" placeholder = "fecha" value "" /> <br/><br/>
 			<input type = "text"  required="" name="link" placeholder = "link" value "" /> <br/><br/>
 			<br/>

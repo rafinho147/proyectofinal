@@ -15,6 +15,8 @@ $id_idioma= $_POST["id_idioma"];
 $id_categoria= $_POST["id_categoria"];
 
 
+$query="INSERT INTO `autor_libro`(  `id_autor`, `id_libro`) VALUES ($id_autor,$id_libro)";
+$resultado= $conexion->query($query);
 
  
 $query="UPDATE autor SET  autor='$autor' WHERE id_autor='$id_autor'";

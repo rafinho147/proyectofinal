@@ -2,14 +2,15 @@
 
 INCLUDE ("conexion.PHP");
 
-$id_autor= $_POST["id_autor"];
-$id_libro= $_POST["id_libro"];
 
-$query="INSERT INTO `autor_libro`(  `id_autor`, `id_libro`) VALUES ($id_autor,$id_libro)";
+$autor= $_POST["autor"];
+
+
+$query="INSERT INTO `autor`( `autor`) VALUES ('$autor')";
 $resultado= $conexion->query($query);
 
 if($resultado){
-	header("location: tabla.php");
+	header("location: usuario_libro.php");
 }
 else
 {
