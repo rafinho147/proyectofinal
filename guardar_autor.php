@@ -2,9 +2,7 @@
 
 INCLUDE ("conexion.PHP");
 
-
 $autor= $_POST["autor"];
-
 
 $query="INSERT INTO `autor`( `autor`) VALUES ('$autor')";
 $resultado= $conexion->query($query);

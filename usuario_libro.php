@@ -6,20 +6,18 @@
 	<center>
 		<form action="guardar_libro.php" method="POST">
 			 <br/> <br/> <br/>
-			<div>seleccione el actor del libro que desea insertar</div>
-
-
+			<div>SELECCIONE EL AUTOR DEL LIBRO QUE DESEA INSERTAR</div>
 
 <br/>
-<div> EN DADO CASO DE QUE NO ENCUENTRE EL AUTOR NI EL LIBRO EN LA LISTA DESPEGABLE</div>
+<div> EN DADO CASO DE QUE NO ENCUENTRE EL AUTOR </div>
 <br/>
 <br/>
 
-	<a href="usuario_autor.php?">INSERTE AUTOR Y LIBRO</a>
+	<a href="usuario_autor.php?">INSERTE AUTOR </a>
 	<br/>
 
 
-			<div>seleccione autor relacionado</div>
+			<div> SELECCIONE AUTOR RELACIONADO</div>
 <select name="id_autor">
 <?php
 try{
@@ -59,11 +57,6 @@ catch(Exception $e)
 
 ?>
 </select>
-
-			    
-			
-			
-
 			<h1><input type = "submit" value =  "aceptar"/></h1>
 		</form>
 	</center>

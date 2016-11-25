@@ -23,8 +23,7 @@
 					<td> AUTOR</td>
 					<td> CATEGORIA</td>
 					<td> IDIOMA</td>
-
-					<td colspan="2"> AJUSTED DE LIBRO</td>
+                    <td colspan="2"> AJUSTED DE LIBRO</td>
 				</tr>
 			<?php
 				include("conexion.php");
@@ -38,8 +37,6 @@ GROUP BY libro.id_libro";
 
 				$resultado= $conexion->query($query);
 				while($row=$resultado->fetch_assoc()){
-
-				
 			?>
 			<tr>
 			    <td><?php echo $row['id_libro']; ?></td>
@@ -50,8 +47,7 @@ GROUP BY libro.id_libro";
 				<td><?php echo $row['autor']; ?></td>
 				<td><?php echo $row['categoria']; ?></td>
 				<td><?php echo $row['idioma']; ?></td>
-			
-                <td><a href="modificar.php?id_libro=<?php echo $row['id_libro']; ?>">Modificar</a></td>
+			    <td><a href="modificar.php?id_libro=<?php echo $row['id_libro']; ?>">Modificar</a></td>
 				<td><a href="encriptacion.html?" >ADMINISTRADOR </a></td>
 			</tr>
 			<?php
@@ -60,8 +56,7 @@ GROUP BY libro.id_libro";
 			?>
 
 			</tbody>
-
-		</table>
+        </table>
 	</center>
 </body>
 </html>

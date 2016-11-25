@@ -9,8 +9,7 @@
 			 <br/> <br/> <br/>
 		
 			<div> EL MUNDO DE LIBRO DEL LIBRO GRATIS .COM</div>
-		
-			
+		<BR/>
 <div>seleccione una categoria</div>
 <select name="id_categoria">
 <?php
@@ -21,7 +20,6 @@ foreach ($resultados as $fila)
 {
     echo "<option value='$fila[id_categoria]'>$fila[categoria]</option>";
 }    
-
 
 }
 catch(Exception $e)
@@ -43,7 +41,6 @@ foreach ($resultados as $fila)
     echo "<option value='$fila[id_idioma]'>$fila[idioma]</option>";
 }    
 
-
 }
 catch(Exception $e)
 {
@@ -54,7 +51,6 @@ catch(Exception $e)
 </select>
 <br/>
 <br/>
-
             <input type = "text"  required="" name="libro" placeholder = "libro" value "" /> <br/><br/>
             <input type = "text"  required="" name="foto" placeholder = "foto" value "" /> <br/><br/>
 			<input type = "text"  required="" name="fecha" placeholder = "fecha" value "" /> <br/><br/>

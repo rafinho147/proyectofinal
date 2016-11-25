@@ -1,6 +1,6 @@
 <html>
 	 <head> 
-		<title> Guardar libro</title>
+		<title> GUARDAR AUTOR </title>
 	 </head>
 <body>
 	<center>
@@ -8,11 +8,7 @@
 			 <br/> <br/> <br/>
 			<div>seleccione el actor del libro que desea insertar</div>
 			
-
-			    <input type = "text"  required="" name="autor" placeholder = "autor" value "" /> <br/><br/>
-			
-			
-
+              <input type = "text"  required="" name="autor" placeholder = "autor" value "" /> <br/><br/>
 			<h1><input type = "submit" value =  "aceptar"/></h1>
 		</form>
 	</center>

@@ -1,7 +1,7 @@
 
 <html>
 	 <head> 
-		<title> Guardar album  </title>
+		<title> MODIFICAR LIBRO  </title>
 	 </head>
 <body>
 	<center>
@@ -9,14 +9,11 @@
 		 $id_libro=$_GET['id_libro'];
 				include("conexion.php");
 				
-
-				$query="SELECT libro.id_libro,libro,idioma,categoria,fecha,foto,autor,link,autor.id_autor,libro.id_libro from libro,categoria,idioma,autor_libro,autor
+$query="SELECT libro.id_libro,libro,idioma,categoria,fecha,foto,autor,link,autor.id_autor,libro.id_libro from libro,categoria,idioma,autor_libro,autor
 WHERE libro.id_libro=autor_libro.id_libro
 and autor_libro.id_autor=autor.id_autor
 and libro.id_categoria=categoria.id_categoria
 and libro.id_idioma=idioma.id_idioma and libro.id_libro = $id_libro";
-
-
 
 				$resultado= $conexion->query($query);
 				$row=$resultado->fetch_assoc();
@@ -45,7 +42,6 @@ foreach ($resultados as $fila)
     echo "<option value='$fila[id_categoria]'>$fila[categoria]</option>";
 }    
 
-
 }
 catch(Exception $e)
 {
@@ -66,7 +62,6 @@ foreach ($resultados as $fila)
     echo "<option value='$fila[id_idioma]'>$fila[idioma]</option>";
 }    
 
-
 }
 catch(Exception $e)
 {
@@ -75,8 +70,6 @@ catch(Exception $e)
 
 ?>
 </select>
-			
-
 			<br/><br/>
 			<input type = "submit" value = "aceptar"/>
 		
